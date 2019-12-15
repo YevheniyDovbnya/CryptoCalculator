@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".currencycalculator.CurrencyCalculatorFragment">
+
+    <TextView
+        android:id="@+id/tradePairTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="16dp"
+        android:textSize="37sp"
+        tools:text="BTC / USD" />
+
+    <LinearLayout
+        android:id="@+id/swapView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="16dp" >
+
+        <TextView
+            android:id="@+id/symbol1TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:textSize="27sp"
+            tools:text="BTC" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_swap_vert" />
+
+        <TextView
+            android:id="@+id/symbol2TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="27sp"
+            tools:text="USD" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/priceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="27sp"
+        android:layout_margin="16dp"
+        android:layout_centerInParent="true"
+        android:layout_alignTop="@id/swapView"
+        tools:text="8050" />
+
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textSize="27sp"
+        android:layout_centerInParent="true"
+        android:layout_alignBottom="@id/swapView"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:focusableInTouchMode="true"
+        tools:text="1.5" />
+
+    <TextView
+        android:id="@+id/sumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="47sp"
+        android:layout_below="@id/amountEditText"
+        android:layout_centerInParent="true"
+        tools:text="12000" />
+
+
+</RelativeLayout>

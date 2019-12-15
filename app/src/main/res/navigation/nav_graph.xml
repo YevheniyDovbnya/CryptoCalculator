@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/tradePairsFragment" >
+
+    <fragment
+        android:id="@+id/tradePairsFragment"
+        android:name="com.example.cryptocalculator.tradepairs.TradePairsFragment"
+        android:label="TradePairs"
+        tools:layout="@layout/item_trade_pair" >
+
+        <action
+            android:id="@+id/action_tradePairsfragment_to_currencyCalculatorFragment"
+            app:destination="@id/currencyCalculatorFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/currencyCalculatorFragment"
+        android:name="com.example.cryptocalculator.currencycalculator.CurrencyCalculatorFragment"
+        android:label="CurrencyCalculator"
+        tools:layout="@layout/fragment_currency_calculator" >
+
+        <action
+            android:id="@+id/action_currencyCalculatorFragment_to_tradePairsFragment"
+            app:destination="@id/tradePairsFragment" />
+
+        <argument
+            android:name="tradePair"
+            app:argType="com.example.cryptocalculator.data.TradePair" />
+
+    </fragment>
+
+</navigation>

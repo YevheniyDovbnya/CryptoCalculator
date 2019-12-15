@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CryptoCalculator</string>
+    <string-array name="currency">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>GBP</item>
+    </string-array>
+    <string name="trade_pair_title">%s / %s</string>
+</resources>
